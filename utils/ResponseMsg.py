@@ -1,3 +1,6 @@
+from django.http import HttpResponse
+
+
 class MenuResponse():
 
     @staticmethod
