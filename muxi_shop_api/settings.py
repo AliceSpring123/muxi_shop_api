@@ -43,13 +43,22 @@ INSTALLED_APPS = [
     'apps.goods',
     'apps.pay',
     'apps.order',
+    'corsheaders',  # 跨域请求配置
 ]
 
+# 允许所有域名跨域(生产环境慎用！)
+CORS_ORIGIN_ALLOW_ALL = True
+
+# 允许携带cookie
+CORS_ALLOW_CREDENTIALS = True
+
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',    # 跨域请求中间件
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
