@@ -78,13 +78,23 @@ WSGI_APPLICATION = 'muxi_shop_api.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+# 配置mysql数据库
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+  'default': {
+      # 数据库引擎(是mysql还是oracle等)
+      'ENGINE': 'django.db.backends.mysql',
+      # 数据库名
+      'NAME': 'muxi_shop',
+      # 连接数据库的用户名
+      'USER': 'admin1',
+      # 连接数据库的密码
+      'PASSWORD': 'lzr123.0',
+      # 数据库的主机地址
+      'HOST': '127.0.0.1',
+      # 数据库的端口号
+      'PORT': '3306',
+  }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
