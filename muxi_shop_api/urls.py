@@ -17,10 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from apps.menu.views import GoodsMainMenu, GoodsSubMenu
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('menu/', include('apps.menu.urls')),
     path('goods/', include('apps.goods.urls')),
+    path('cart/', include('apps.cart.urls')),
 ]

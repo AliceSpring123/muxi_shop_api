@@ -36,3 +36,22 @@ class GoodsResponse():
     def other(data):
         result = {"status": 2002, "data": data}
         return HttpResponse(json.dumps(result), content_type="application/json")
+    
+
+
+class CartResponse():
+
+    @staticmethod
+    def success(data):
+        result = {"status":2000,"data":data}
+        return HttpResponse(json.dumps(result), content_type = "application/json")
+
+    @staticmethod
+    def failed(data):
+        result = {"status": 2001, "data": data}
+        return HttpResponse(json.dumps(result), content_type="application/json")
+
+    @staticmethod
+    def other(data):
+        result = {"status": 2002, "data": data}
+        return HttpResponse(json.dumps(result), content_type="application/json")
