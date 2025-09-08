@@ -22,4 +22,5 @@ from apps.menu.views import GoodsMainMenu, GoodsSubMenu
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('menu/', include('apps.menu.urls')),
+    path('goods/', include('apps.goods.urls')),
 ]
