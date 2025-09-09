@@ -97,7 +97,7 @@ DATABASES = {
       # 连接数据库的用户名
       'USER': 'admin1',
       # 连接数据库的密码
-      'PASSWORD': 'lzr123.0',
+      'PASSWORD': '123qwe',
       # 数据库的主机地址
       'HOST': '127.0.0.1',
       # 数据库的端口号

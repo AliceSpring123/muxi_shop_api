@@ -1,9 +1,9 @@
 from django.urls import path
 
-from apps.cart.views import CartAPIView
+from apps.cart.views import ShoppingCartAPIView
 
 # 
 
 urlpatterns = [
-    path('', CartAPIView.as_view()),
+    path('', ShoppingCartAPIView.as_view()),
 ]
