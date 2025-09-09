@@ -55,3 +55,21 @@ class CartResponse():
     def other(data):
         result = {"status": 3002, "data": data}
         return JsonResponse(result, safe=False)
+
+# 用户响应都以 4 开头
+class UserResponse():
+
+    @staticmethod
+    def success(data, msg):
+        result = {"status":4000,"success": True, "message": msg, "data":data}
+        return JsonResponse(result,safe=False)
+
+    @staticmethod
+    def failed(data, msg):
+        result = {"status": 4000, "success": True, "message": msg, "data": data}
+        return JsonResponse(result, safe=False)
+
+    @staticmethod
+    def others(data, msg):
+        result = {"status": 4000, "success": True, "message": msg, "data": data}
+        return JsonResponse(result, safe=False)

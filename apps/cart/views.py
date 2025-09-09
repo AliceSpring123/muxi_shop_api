@@ -18,7 +18,7 @@ class ShoppingCartAPIView(APIView):
     # @todo 后续补充登录权限验证
 
     # 获取购物车数据
-    # http://127.0.0.1:8000/cart?email=123444@q1q.com
+    # http://127.0.0.1:8000/cart?email=123444@qq.com
     def get(self, request):
         # 找到此账户下的购物车数据
         email = request.GET.get('email')
@@ -47,7 +47,7 @@ class ShoppingCartAPIView(APIView):
         if not serializer.is_valid():
             return Response({
                 'success': False,
-                'message': '请求数据验证失败',
+                'message': '数据验证失败',
                 'errors': serializer.errors
             }, status=status.HTTP_400_BAD_REQUEST)
 
